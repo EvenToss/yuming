@@ -12,4 +12,6 @@
 */
 
 Route::get('/yuming', 'DomainController@index');
+Route::get('/proxy', 'DomainController@IpQuery');
+Route::get('export', 'DomainController@export');
 Route::get('/juzi', 'JuziController@index');

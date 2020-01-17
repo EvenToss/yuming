@@ -16,7 +16,7 @@ class JuziController extends Controller
     {
         $yuming = $this->redicrtUrl();
         QueryList::multiGet($yuming)->concurrency(10)->withHeaders([
-            'Cookie' => 'juzsnapshot=Y; juz_Session=oat79l47lm4371pn0er3uv7st1; Hm_lvt_8b7ca1767a027c0ac4628fae1cf8339e=1576135826,1576564276,1577771900; Hm_lvt_f87ce311d1eb4334ea957f57640e9d15=1576135826,1576564276,1577771900; juz_user_login=Sq1Wbe8ucv%2F1OKlimdYl4WQ5dJRPq61yECPKjc5HNcikzgxXZCzgFXKqisssVzE9h99Z6hy1%2FIwOeWbIDxM6J7mCIfRhe5t8vlMLO3z3uXixBge5Mfh1AAEYDpo0S0nG; Hm_lpvt_f87ce311d1eb4334ea957f57640e9d15=1577773624; Hm_lpvt_8b7ca1767a027c0ac4628fae1cf8339e=1577773624',
+            'Cookie' => 'juz_Session=kc72eembn4k3ucueo2gvopaeq0; Hm_lvt_8b7ca1767a027c0ac4628fae1cf8339e=1578651884,1578709344,1578983203; Hm_lvt_f87ce311d1eb4334ea957f57640e9d15=1578651883,1578983203; juz_user_login=0d%2BxqBgSvqJ4aw%2Bm%2BnvoYRnraTiykdnxW3lLaiSfflhL2qXkbYXHjfRltGWE8hYAByIyKwagXDkUZtE%2FOy7000BUsdER%2BPD1lu7Cf%2BjAcSa%2BcRuqaRehV54ML5EclwMd; juzsnapshot=Y; Hm_lpvt_8b7ca1767a027c0ac4628fae1cf8339e=1578983350; Hm_lpvt_f87ce311d1eb4334ea957f57640e9d15=1578983350',
         ])->success(function (QueryList $ql, Response $response, $index) {
             $data = $ql->find('tbody>tr')->map(function ($row) {
                 $condition[] = $row->find('td:eq(1)')->texts()->all();
@@ -41,7 +41,7 @@ class JuziController extends Controller
     {
         $yuming = 'yescq.com';
         $ql     = QueryList::post('https://tool.lizseo.com/snapshot/save/', [
-            'post_hash'  => '5340593a2176f2af82b5b301e8fc489b',
+            'post_hash'  => 'ab7759765951684bf43d69d79f51d3ed',
             'domains'    => $yuming,
             'ajax'       => '1',
             'mark_title' => '',
@@ -51,7 +51,7 @@ class JuziController extends Controller
                 'Content-Type'     => 'application/x-www-form-urlencoded',
                 'X-Requested-With' => 'xmlhttprequest',
                 'User-Agent'       => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
-                'Cookie'           => 'juzsnapshot=Y; juz_Session=oat79l47lm4371pn0er3uv7st1; Hm_lvt_8b7ca1767a027c0ac4628fae1cf8339e=1576135826,1576564276,1577771900; Hm_lvt_f87ce311d1eb4334ea957f57640e9d15=1576135826,1576564276,1577771900; juz_user_login=Sq1Wbe8ucv%2F1OKlimdYl4WQ5dJRPq61yECPKjc5HNcikzgxXZCzgFXKqisssVzE9h99Z6hy1%2FIwOeWbIDxM6J7mCIfRhe5t8vlMLO3z3uXixBge5Mfh1AAEYDpo0S0nG; Hm_lpvt_f87ce311d1eb4334ea957f57640e9d15=1577773624; Hm_lpvt_8b7ca1767a027c0ac4628fae1cf8339e=1577773624',
+                'Cookie'           => 'juz_Session=kc72eembn4k3ucueo2gvopaeq0; Hm_lvt_8b7ca1767a027c0ac4628fae1cf8339e=1578651884,1578709344,1578983203; Hm_lvt_f87ce311d1eb4334ea957f57640e9d15=1578651883,1578983203; juz_user_login=0d%2BxqBgSvqJ4aw%2Bm%2BnvoYRnraTiykdnxW3lLaiSfflhL2qXkbYXHjfRltGWE8hYAByIyKwagXDkUZtE%2FOy7000BUsdER%2BPD1lu7Cf%2BjAcSa%2BcRuqaRehV54ML5EclwMd; juzsnapshot=Y; Hm_lpvt_8b7ca1767a027c0ac4628fae1cf8339e=1578983350; Hm_lpvt_f87ce311d1eb4334ea957f57640e9d15=1578983350',
             ]
         ]);
 

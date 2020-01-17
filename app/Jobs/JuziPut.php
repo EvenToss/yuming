@@ -43,7 +43,7 @@ class JuziPut implements ShouldQueue
     {
         $yuming = $this->redicrtUrl($yuming);
         QueryList::multiGet($yuming)->concurrency(10)->withHeaders([
-            'Cookie' => 'juzsnapshot=Y; juz_Session=oat79l47lm4371pn0er3uv7st1; Hm_lvt_8b7ca1767a027c0ac4628fae1cf8339e=1576135826,1576564276,1577771900; Hm_lvt_f87ce311d1eb4334ea957f57640e9d15=1576135826,1576564276,1577771900; juz_user_login=YtT0WTOP7OKa3GwWEQvOp7wcdCbyASOe5xrTaJi7z8hArc%2FdzSby9ojZIAsfuY2whbsBVf8UMf%2FhQqeI4SDr77Si%2FNxPKGGyMniKMqi5UUz0ETn7DIHI4gQ5JrPeckfw; Hm_lpvt_8b7ca1767a027c0ac4628fae1cf8339e=1577785857; Hm_lpvt_f87ce311d1eb4334ea957f57640e9d15=1577785857',
+            'Cookie' => 'juz_Session=kc72eembn4k3ucueo2gvopaeq0; Hm_lvt_8b7ca1767a027c0ac4628fae1cf8339e=1578651884,1578709344,1578983203; Hm_lvt_f87ce311d1eb4334ea957f57640e9d15=1578651883,1578983203; juzsnapshot=Y; juz_user_login=ckaN%2FxaWO8T%2FV8Yk2wxe02jycbrjLzlR9SnDxd30FM8qrFAAFRgy9kIB1aabfyBWWDaGT5iR%2BQd%2FW98%2FTUVhMGhpbuPOnyOWjypzHMdYLMWyT9lA3XketZ3KV9a5lPFHxNwm4r3HpRhniB6ySsW9bg%3D%3D; Hm_lpvt_8b7ca1767a027c0ac4628fae1cf8339e=1578986968; Hm_lpvt_f87ce311d1eb4334ea957f57640e9d15=1578986968',
         ])->success(function (QueryList $ql, Response $response, $index) {
             $data = $ql->find('tbody>tr')->map(function ($row) {
                 $condition[] = $row->find('td:eq(1)')->texts()->all();
@@ -68,7 +68,7 @@ class JuziPut implements ShouldQueue
     public function redicrtUrl($yuming)
     {
         $ql = QueryList::post('https://tool.lizseo.com/snapshot/save/', [
-            'post_hash'  => '8405484ac34935413db24f4f8a48dc42',
+            'post_hash'  => 'b72775b559810cc3c85a4e0f977d1e57',
             'domains'    => $yuming,
             'ajax'       => '1',
             'mark_title' => '',
@@ -78,7 +78,7 @@ class JuziPut implements ShouldQueue
                 'Content-Type'     => 'application/x-www-form-urlencoded',
                 'X-Requested-With' => 'xmlhttprequest',
                 'User-Agent'       => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
-                'Cookie'           => 'juzsnapshot=Y; juz_Session=oat79l47lm4371pn0er3uv7st1; Hm_lvt_8b7ca1767a027c0ac4628fae1cf8339e=1576135826,1576564276,1577771900; Hm_lvt_f87ce311d1eb4334ea957f57640e9d15=1576135826,1576564276,1577771900; juz_user_login=YtT0WTOP7OKa3GwWEQvOp7wcdCbyASOe5xrTaJi7z8hArc%2FdzSby9ojZIAsfuY2whbsBVf8UMf%2FhQqeI4SDr77Si%2FNxPKGGyMniKMqi5UUz0ETn7DIHI4gQ5JrPeckfw; Hm_lpvt_8b7ca1767a027c0ac4628fae1cf8339e=1577785857; Hm_lpvt_f87ce311d1eb4334ea957f57640e9d15=1577785857',
+                'Cookie'           => 'juz_Session=kc72eembn4k3ucueo2gvopaeq0; Hm_lvt_8b7ca1767a027c0ac4628fae1cf8339e=1578651884,1578709344,1578983203; Hm_lvt_f87ce311d1eb4334ea957f57640e9d15=1578651883,1578983203; juzsnapshot=Y; juz_user_login=ckaN%2FxaWO8T%2FV8Yk2wxe02jycbrjLzlR9SnDxd30FM8qrFAAFRgy9kIB1aabfyBWWDaGT5iR%2BQd%2FW98%2FTUVhMGhpbuPOnyOWjypzHMdYLMWyT9lA3XketZ3KV9a5lPFHxNwm4r3HpRhniB6ySsW9bg%3D%3D; Hm_lpvt_8b7ca1767a027c0ac4628fae1cf8339e=1578986968; Hm_lpvt_f87ce311d1eb4334ea957f57640e9d15=1578986968',
             ]
         ]);
 
